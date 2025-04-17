@@ -1,7 +1,21 @@
 <script>
-	window.fwSettings={
-	'widget_id':150000005063
-	};
-	!function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
+  window.fwSettings = {
+    'widget_id': 150000005063
+  };
+
+  !function() {
+    if (typeof window.FreshworksWidget !== "function") {
+      var n = function() {
+        n.q.push(arguments)
+      };
+      n.q = [];
+      window.FreshworksWidget = n;
+    }
+  }();
+
+  // 위젯이 로드된 후 자동으로 열기
+  window.addEventListener("load", function() {
+    FreshworksWidget('open'); // 자동으로 위젯 열기
+  });
 </script>
 <script type='text/javascript' src='https://widget.freshworks.com/widgets/150000005063.js' async defer></script>
